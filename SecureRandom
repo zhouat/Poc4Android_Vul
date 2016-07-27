@@ -15,3 +15,8 @@ try{
 
 1. SecureRandom.setSeed   (< Android 4.2)
 2. SecureRandom.nextBytes (< Android 4.4)
+
+
+Ref:
+ http://www.freebuf.com/vuls/60494.html
+《Randomly Failed! The State of Randomness in Current Java Implementations》
