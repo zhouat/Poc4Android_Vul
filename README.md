@@ -1,7 +1,7 @@
 # Practical Tools
 
 [1]convert text to binary, eq to xxd -r -p
-#!/usr/bin/env python
+
 import struct
 
 infile = open("data","rb")
@@ -18,7 +18,7 @@ def main():
 			if(index%2==0):
 				#print ''.join(buf)
 				#B unsigned char integer 1Byte
-				outfile.write(struct.pack('B',int(''.join(buf),16)))				
+				outfile.write(struct.pack('B',int(''.join(buf),16)))
 		line =  infile.read(1)
 if __name__ == '__main__':
 	main()
