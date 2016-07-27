@@ -1,0 +1,17 @@
+import java.security.SecureRandom;
+byte[] b = new byte[] { (byte) 1 };
+SecureRandom secureRandom = new SecureRandom(b);
+// secureRandom.setSeed(b);
+// secureRandom.setSeed(1);
+// Prior to Android 4.2, the next line would always return the same number!
+Log.e("demo",String.valueOf(secureRandom.nextInt()));
+
+try{
+	SecureRandom rand = SecureRandom.getInstance("SHA1PRNG");
+	Log.e("demo", "rand.getProvider(): " + rand.getProvider().getName());
+	// The default implementation of SecureRandom from Crypto to OpenSSL ,from Android4.2
+}catch(Exception e){
+}
+
+1. SecureRandom.setSeed   (< Android 4.2)
+2. SecureRandom.nextBytes (< Android 4.4)
